@@ -1,0 +1,2 @@
+Desarrollé un agente conversacional de asesoramiento inmobiliario que integra Machine Learning para predicción de precios y RAG para consultas sobre documentación especializada. Entrené un modelo con datos reales del mercado logrando 64% mejor rendimiento que la mediana, e implementé la arquitectura del agente con LangGraph y una interfaz web interactiva con Gradio. Tecnologías: Python, scikit-learn, LangChain, LangGraph, Pinecone, HuggingFace.
+
