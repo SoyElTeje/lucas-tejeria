@@ -150,3 +150,5 @@ C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\ob
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\obj\Debug\net8.0\FinanceManager.Api.pdb
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\obj\Debug\net8.0\FinanceManager.Api.genruntimeconfig.cache
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\obj\Debug\net8.0\ref\FinanceManager.Api.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\IDataAccess.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\IDataAccess.pdb

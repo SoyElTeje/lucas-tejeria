@@ -18,3 +18,5 @@ C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAc
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccess\obj\Debug\net8.0\FinanceManager.DataAccess.pdb
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccess\obj\Debug\net8.0\FinanceManager.DataAccess.genruntimeconfig.cache
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccess\obj\Debug\net8.0\ref\FinanceManager.DataAccess.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccess\bin\Debug\net8.0\IDataAccess.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccess\bin\Debug\net8.0\IDataAccess.pdb

@@ -9,6 +9,7 @@
       "FinanceManager.DataAccess/1.0.0": {
         "dependencies": {
           "FinanceManager.Domain": "1.0.0",
+          "IDataAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.23",
           "Microsoft.EntityFrameworkCore.Design": "8.0.23",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.23"
@@ -931,6 +932,14 @@
           "FinanceManager.Domain.dll": {}
         }
       },
+      "IDataAccess/1.0.0": {
+        "dependencies": {
+          "FinanceManager.Domain": "1.0.0"
+        },
+        "runtime": {
+          "IDataAccess.dll": {}
+        }
+      },
       "Shared/1.0.0": {
         "runtime": {
           "Shared.dll": {}
@@ -1470,6 +1479,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "FinanceManager.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IDataAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
