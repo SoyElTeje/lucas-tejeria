@@ -1,0 +1,16 @@
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\bin\Release\net8.0\FinanceManager.IDataAccess.deps.json
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\bin\Release\net8.0\FinanceManager.IDataAccess.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\bin\Release\net8.0\FinanceManager.IDataAccess.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\bin\Release\net8.0\FinanceManager.Domain.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\bin\Release\net8.0\FinanceManager.Domain.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\FinanceManager.IDataAccess.csproj.AssemblyReference.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\FinanceManager.IDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\FinanceManager.IDataAccess.AssemblyInfoInputs.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\FinanceManager.IDataAccess.AssemblyInfo.cs
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\FinanceManager.IDataAccess.csproj.CoreCompileInputs.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\FinanceManager.IDataAccess.sourcelink.json
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\FinanceM.E983DEF0.Up2Date
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\FinanceManager.IDataAccess.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\refint\FinanceManager.IDataAccess.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\FinanceManager.IDataAccess.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.IDataAccess\obj\Release\net8.0\ref\FinanceManager.IDataAccess.dll

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinanceManager.DataAccessTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd9b48ac399cad47d1936f118d5356a892167274")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6969e19d79c593b7242fc3bd75c589329240edee")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinanceManager.DataAccessTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinanceManager.DataAccessTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

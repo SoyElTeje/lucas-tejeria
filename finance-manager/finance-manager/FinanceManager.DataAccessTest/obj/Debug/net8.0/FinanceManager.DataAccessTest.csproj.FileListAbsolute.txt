@@ -149,13 +149,9 @@ C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAc
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\FinanceManager.DataAccess.dll
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\FinanceManager.Domain.dll
-C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\IDataAccess.dll
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\Shared.dll
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\FinanceManager.DataAccess.pdb
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\FinanceManager.Domain.pdb
-C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\IDataAccess.pdb
-C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\Shared.pdb
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\obj\Debug\net8.0\FinanceManager.DataAccessTest.csproj.AssemblyReference.cache
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\obj\Debug\net8.0\FinanceManager.DataAccessTest.GeneratedMSBuildEditorConfig.editorconfig
@@ -169,3 +165,5 @@ C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAc
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\obj\Debug\net8.0\FinanceManager.DataAccessTest.pdb
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\obj\Debug\net8.0\FinanceManager.DataAccessTest.genruntimeconfig.cache
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\obj\Debug\net8.0\ref\FinanceManager.DataAccessTest.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\FinanceManager.IDataAccess.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.DataAccessTest\bin\Debug\net8.0\FinanceManager.IDataAccess.pdb

@@ -124,10 +124,8 @@ C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bi
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\FinanceManager.DataAccess.dll
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\FinanceManager.Domain.dll
-C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\Shared.dll
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\FinanceManager.DataAccess.pdb
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\FinanceManager.Domain.pdb
-C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\Shared.pdb
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\obj\Debug\net8.0\FinanceManager.Api.csproj.AssemblyReference.cache
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\obj\Debug\net8.0\FinanceManager.Api.GeneratedMSBuildEditorConfig.editorconfig
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\obj\Debug\net8.0\FinanceManager.Api.AssemblyInfoInputs.cache
@@ -150,5 +148,5 @@ C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\ob
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\obj\Debug\net8.0\FinanceManager.Api.pdb
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\obj\Debug\net8.0\FinanceManager.Api.genruntimeconfig.cache
 C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\obj\Debug\net8.0\ref\FinanceManager.Api.dll
-C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\IDataAccess.dll
-C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\IDataAccess.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\FinanceManager.IDataAccess.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Api\bin\Debug\net8.0\FinanceManager.IDataAccess.pdb

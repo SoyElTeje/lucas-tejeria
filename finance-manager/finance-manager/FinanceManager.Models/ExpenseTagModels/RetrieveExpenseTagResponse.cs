@@ -5,6 +5,8 @@ public class RetrieveExpenseTagResponse
     public required string Id { get; set; }
     public required string Name { get; set; }
     public required string Description { get; set; }
+    public required string ColorId { get; set; }
+    public required string ColorName { get; set; }
     public required string HexCode { get; set; }
     public required string IconUrl { get; set; }
     public required string CreatorId { get; set; }

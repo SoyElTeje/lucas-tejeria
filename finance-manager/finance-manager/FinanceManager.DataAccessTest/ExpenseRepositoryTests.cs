@@ -1,7 +1,6 @@
 using finance_manager;
 using FinanceManager.DataAccess.Context;
 using FinanceManager.DataAccess.Repositories;
-using Shared;
 
 namespace UserRepositoryTest;
 
@@ -11,6 +10,7 @@ public class ExpenseRepositoryTests
     private SqlContext _context = null!;
     private ExpenseRepository _repo = null!;
     private User _user = null!;
+    private Color _color = null!;
     private ExpenseTag _tag = null!;
     private Currency _currency = null!;
     private Account _account = null!;
@@ -25,10 +25,12 @@ public class ExpenseRepositoryTests
         _repo = new ExpenseRepository(_context);
         _user = new User("Test", "User", "test@test.com", "Pass123!", new DateTime(1990, 1, 1));
         _currency = new Currency("USD", "Dólar", "$");
+        _color = new Color("Rojo", "#FF0000");
         _context.Users.Add(_user);
         _context.Currencies.Add(_currency);
+        _context.Colors.Add(_color);
         _context.SaveChanges();
-        _tag = new ExpenseTag(_user, "Comida", "Gastos comida", new Color("#FF0000"), "icon");
+        _tag = new ExpenseTag(_user, "Comida", "Gastos comida", _color, "icon");
         _context.ExpenseTags.Add(_tag);
         _context.SaveChanges();
         _account = new Account("Cuenta", _currency, 0m, "");

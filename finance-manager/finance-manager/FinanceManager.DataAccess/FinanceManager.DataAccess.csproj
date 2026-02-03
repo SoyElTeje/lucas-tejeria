@@ -17,7 +17,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\FinanceManager.Domain\FinanceManager.Domain.csproj" />
-      <ProjectReference Include="..\IDataAccess\IDataAccess.csproj" />
+      <ProjectReference Include="..\FinanceManager.IDataAccess\FinanceManager.IDataAccess.csproj" />
     </ItemGroup>
 
     <ItemGroup>

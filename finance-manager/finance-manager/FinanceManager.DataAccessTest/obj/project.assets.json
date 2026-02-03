@@ -1392,7 +1392,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "FinanceManager.Domain": "1.0.0",
-          "IDataAccess": "1.0.0",
+          "FinanceManager.IDataAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.23",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.23"
         },
@@ -1406,9 +1406,6 @@
       "FinanceManager.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Shared": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/FinanceManager.Domain.dll": {}
         },
@@ -1416,27 +1413,17 @@
           "bin/placeholder/FinanceManager.Domain.dll": {}
         }
       },
-      "IDataAccess/1.0.0": {
+      "FinanceManager.IDataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "FinanceManager.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/IDataAccess.dll": {}
+          "bin/placeholder/FinanceManager.IDataAccess.dll": {}
         },
         "runtime": {
-          "bin/placeholder/IDataAccess.dll": {}
-        }
-      },
-      "Shared/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/Shared.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shared.dll": {}
+          "bin/placeholder/FinanceManager.IDataAccess.dll": {}
         }
       }
     }
@@ -3779,15 +3766,10 @@
       "path": "../FinanceManager.Domain/FinanceManager.Domain.csproj",
       "msbuildProject": "../FinanceManager.Domain/FinanceManager.Domain.csproj"
     },
-    "IDataAccess/1.0.0": {
+    "FinanceManager.IDataAccess/1.0.0": {
       "type": "project",
-      "path": "../IDataAccess/IDataAccess.csproj",
-      "msbuildProject": "../IDataAccess/IDataAccess.csproj"
-    },
-    "Shared/1.0.0": {
-      "type": "project",
-      "path": "../Shared/Shared.csproj",
-      "msbuildProject": "../Shared/Shared.csproj"
+      "path": "../FinanceManager.IDataAccess/FinanceManager.IDataAccess.csproj",
+      "msbuildProject": "../FinanceManager.IDataAccess/FinanceManager.IDataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {

@@ -60,6 +60,29 @@ namespace FinanceManager.DataAccess.Migrations
                     b.ToTable("Accounts");
                 });
 
+            modelBuilder.Entity("finance_manager.Color", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("HexCode")
+                        .IsRequired()
+                        .HasMaxLength(7)
+                        .HasColumnType("nvarchar(7)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HexCode")
+                        .IsUnique();
+
+                    b.ToTable("Colors", (string)null);
+                });
+
             modelBuilder.Entity("finance_manager.Currency", b =>
                 {
                     b.Property<string>("Id")
@@ -123,6 +146,10 @@ namespace FinanceManager.DataAccess.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("ColorId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("CreatorId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -143,6 +170,8 @@ namespace FinanceManager.DataAccess.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ColorId");
 
                     b.HasIndex("CreatorId");
 
@@ -340,32 +369,19 @@ namespace FinanceManager.DataAccess.Migrations
 
             modelBuilder.Entity("finance_manager.ExpenseTag", b =>
                 {
+                    b.HasOne("finance_manager.Color", "Color")
+                        .WithMany()
+                        .HasForeignKey("ColorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("finance_manager.User", "Creator")
                         .WithMany()
                         .HasForeignKey("CreatorId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.OwnsOne("Shared.Color", "Color", b1 =>
-                        {
-                            b1.Property<string>("ExpenseTagId")
-                                .HasColumnType("nvarchar(450)");
-
-                            b1.Property<string>("HexCode")
-                                .IsRequired()
-                                .HasMaxLength(7)
-                                .HasColumnType("nvarchar(7)");
-
-                            b1.HasKey("ExpenseTagId");
-
-                            b1.ToTable("ExpenseTags");
-
-                            b1.WithOwner()
-                                .HasForeignKey("ExpenseTagId");
-                        });
-
-                    b.Navigation("Color")
-                        .IsRequired();
+                    b.Navigation("Color");
 
                     b.Navigation("Creator");
                 });

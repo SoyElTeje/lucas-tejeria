@@ -14,6 +14,7 @@ public class SqlContext : DbContext
     }
 
     public virtual DbSet<Account> Accounts { get; set; }
+    public virtual DbSet<Color> Colors { get; set; }
     public virtual DbSet<Currency> Currencies { get; set; }
     public virtual DbSet<Expense> Expenses { get; set; }
     public virtual DbSet<ExpenseTag> ExpenseTags { get; set; }
@@ -38,7 +39,19 @@ public class SqlContext : DbContext
             entity.Property(e => e.Password).HasMaxLength(256);
         });
 
-        // ----- 2. Currency -----
+        // ----- 2. Color -----
+        modelBuilder.Entity<Color>(entity =>
+        {
+            entity.ToTable("Colors");
+            entity.HasKey(e => e.Id);
+
+            entity.HasIndex(e => e.HexCode).IsUnique();
+
+            entity.Property(e => e.Name).HasMaxLength(100);
+            entity.Property(e => e.HexCode).HasMaxLength(7);
+        });
+
+        // ----- 3. Currency -----
         modelBuilder.Entity<Currency>(entity =>
         {
             entity.ToTable("Currencies");
@@ -51,7 +64,7 @@ public class SqlContext : DbContext
             entity.Property(e => e.Symbol).HasMaxLength(10);
         });
 
-        // ----- 3. Account (FK User vía shadow, FK Currency) -----
+        // ----- 4. Account (FK User vía shadow, FK Currency) -----
         modelBuilder.Entity<Account>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -71,7 +84,7 @@ public class SqlContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 4. ExpenseTag (FK User vía shadow) -----
+        // ----- 5. ExpenseTag (FK User, FK Color) -----
         modelBuilder.Entity<ExpenseTag>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -85,13 +98,13 @@ public class SqlContext : DbContext
                 .HasForeignKey("CreatorId")
                 .OnDelete(DeleteBehavior.Restrict);
 
-            entity.OwnsOne(e => e.Color, c =>
-            {
-                c.Property(x => x.HexCode).HasMaxLength(7);
-            });
+            entity.HasOne(e => e.Color)
+                .WithMany()
+                .HasForeignKey(e => e.ColorId)
+                .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 5. Purchase (FK Account vía shadow) -----
+        // ----- 6. Purchase (FK Account vía shadow) -----
         modelBuilder.Entity<Purchase>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -104,7 +117,7 @@ public class SqlContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 6. Expense (FK ExpenseTag y Purchase vía shadow) -----
+        // ----- 7. Expense (FK ExpenseTag y Purchase vía shadow) -----
         modelBuilder.Entity<Expense>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -123,7 +136,7 @@ public class SqlContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 7. RecurrenceRuleBase (TPH) y EveryNDaysRule -----
+        // ----- 8. RecurrenceRuleBase (TPH) y EveryNDaysRule -----
         modelBuilder.Entity<RecurrenceRuleBase>(entity =>
         {
             entity.ToTable("RecurrenceRules");
@@ -140,7 +153,7 @@ public class SqlContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 8. ScheduledIncome (FK RecurrenceRuleBase vía shadow) -----
+        // ----- 9. ScheduledIncome (FK RecurrenceRuleBase vía shadow) -----
         modelBuilder.Entity<ScheduledIncome>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -151,7 +164,7 @@ public class SqlContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 9. Income (FK Currency, FK ScheduledIncome opcional vía shadow) -----
+        // ----- 10. Income (FK Currency, FK ScheduledIncome opcional vía shadow) -----
         modelBuilder.Entity<Income>(entity =>
         {
             entity.HasKey(e => e.Id);

@@ -1,0 +1,12 @@
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\bin\Debug\net8.0\FinanceManager.Service.deps.json
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\bin\Debug\net8.0\FinanceManager.Service.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\bin\Debug\net8.0\FinanceManager.Service.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\obj\Debug\net8.0\FinanceManager.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\obj\Debug\net8.0\FinanceManager.Service.AssemblyInfoInputs.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\obj\Debug\net8.0\FinanceManager.Service.AssemblyInfo.cs
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\obj\Debug\net8.0\FinanceManager.Service.csproj.CoreCompileInputs.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\obj\Debug\net8.0\FinanceManager.Service.sourcelink.json
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\obj\Debug\net8.0\FinanceManager.Service.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\obj\Debug\net8.0\refint\FinanceManager.Service.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\obj\Debug\net8.0\FinanceManager.Service.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Service\obj\Debug\net8.0\ref\FinanceManager.Service.dll

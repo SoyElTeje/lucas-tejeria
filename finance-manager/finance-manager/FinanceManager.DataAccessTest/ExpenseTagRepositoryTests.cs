@@ -1,7 +1,6 @@
 using finance_manager;
 using FinanceManager.DataAccess.Context;
 using FinanceManager.DataAccess.Repositories;
-using Shared;
 
 namespace UserRepositoryTest;
 
@@ -11,6 +10,8 @@ public class ExpenseTagRepositoryTests
     private SqlContext _context = null!;
     private ExpenseTagRepository _repo = null!;
     private User _user = null!;
+    private Color _color1 = null!;
+    private Color _color2 = null!;
     private ExpenseTag _tag1 = null!;
     private ExpenseTag _tag2 = null!;
 
@@ -20,10 +21,14 @@ public class ExpenseTagRepositoryTests
         _context = new SqlContextFactory().CreateMemoryContext();
         _repo = new ExpenseTagRepository(_context);
         _user = new User("Test", "User", "test@test.com", "Pass123!", new DateTime(1990, 1, 1));
+        _color1 = new Color("Rojo naranja", "#FF5733");
+        _color2 = new Color("Verde", "#33FF57");
         _context.Users.Add(_user);
+        _context.Colors.Add(_color1);
+        _context.Colors.Add(_color2);
         _context.SaveChanges();
-        _tag1 = new ExpenseTag(_user, "Comida", "Gastos en comida", new Color("#FF5733"), "icon1");
-        _tag2 = new ExpenseTag(_user, "Transporte", "Gastos en transporte", new Color("#33FF57"), "icon2");
+        _tag1 = new ExpenseTag(_user, "Comida", "Gastos en comida", _color1, "icon1");
+        _tag2 = new ExpenseTag(_user, "Transporte", "Gastos en transporte", _color2, "icon2");
     }
 
     [TestCleanup]

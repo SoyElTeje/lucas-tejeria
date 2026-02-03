@@ -10,13 +10,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceManager.DataAccess",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceManager.Api", "FinanceManager.Api\FinanceManager.Api.csproj", "{BFC49F4C-8D55-473A-A254-68B19CA4D09B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDataAccess", "IDataAccess\IDataAccess.csproj", "{AB06A608-FA96-4245-BA5F-1B42A4FAAB26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceManager.IDataAccess", "FinanceManager.IDataAccess\FinanceManager.IDataAccess.csproj", "{AB06A608-FA96-4245-BA5F-1B42A4FAAB26}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CC378649-0B8D-40D8-8235-32F894B7F103}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceManager.DataAccessTest", "FinanceManager.DataAccessTest\FinanceManager.DataAccessTest.csproj", "{30F953E0-094C-4ABE-933F-200C5F6AC89F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceManager.Models", "FinanceManager.Models\FinanceManager.Models.csproj", "{B41AED46-D190-4B4E-ACC9-66D5A014B7C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceManager.Service", "FinanceManager.Service\FinanceManager.Service.csproj", "{17CE22BF-871A-46EB-80EC-1B94DC994DB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceManager.IService", "FinanceManager.IService\FinanceManager.IService.csproj", "{713E0498-8BF8-42C9-ADD0-F5EF57787D50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +56,14 @@ Global
 		{B41AED46-D190-4B4E-ACC9-66D5A014B7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B41AED46-D190-4B4E-ACC9-66D5A014B7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B41AED46-D190-4B4E-ACC9-66D5A014B7C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17CE22BF-871A-46EB-80EC-1B94DC994DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CE22BF-871A-46EB-80EC-1B94DC994DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CE22BF-871A-46EB-80EC-1B94DC994DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CE22BF-871A-46EB-80EC-1B94DC994DB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713E0498-8BF8-42C9-ADD0-F5EF57787D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713E0498-8BF8-42C9-ADD0-F5EF57787D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713E0498-8BF8-42C9-ADD0-F5EF57787D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713E0498-8BF8-42C9-ADD0-F5EF57787D50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{96029AB1-6C4E-4CC7-A6EC-750C2864F0FA} = {9808AC72-9910-4C0D-A20A-5CDD2C1BBD81}
@@ -61,5 +73,7 @@ Global
 		{AB06A608-FA96-4245-BA5F-1B42A4FAAB26} = {9808AC72-9910-4C0D-A20A-5CDD2C1BBD81}
 		{30F953E0-094C-4ABE-933F-200C5F6AC89F} = {CC378649-0B8D-40D8-8235-32F894B7F103}
 		{B41AED46-D190-4B4E-ACC9-66D5A014B7C6} = {9808AC72-9910-4C0D-A20A-5CDD2C1BBD81}
+		{17CE22BF-871A-46EB-80EC-1B94DC994DB9} = {9808AC72-9910-4C0D-A20A-5CDD2C1BBD81}
+		{713E0498-8BF8-42C9-ADD0-F5EF57787D50} = {9808AC72-9910-4C0D-A20A-5CDD2C1BBD81}
 	EndGlobalSection
 EndGlobal

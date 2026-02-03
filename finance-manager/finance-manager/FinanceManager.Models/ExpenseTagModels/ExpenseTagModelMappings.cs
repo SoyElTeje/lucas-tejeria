@@ -1,16 +1,14 @@
 using finance_manager;
-using Shared;
 
 namespace FinanceManager.Models.ExpenseTagModels;
 
 public static class ExpenseTagModelMappings
 {
     /// <summary>
-    /// Requiere la entidad User (creador) resuelta. El color se crea desde HexCode.
+    /// Requiere la entidad User (creador) y la entidad Color resueltas por la capa de aplicación.
     /// </summary>
-    public static ExpenseTag ToEntity(this CreateExpenseTagRequest request, User creator)
+    public static ExpenseTag ToEntity(this CreateExpenseTagRequest request, User creator, Color color)
     {
-        var color = new Color(request.HexCode);
         return new ExpenseTag(creator, request.Name, request.Description, color, request.IconUrl);
     }
 
@@ -21,6 +19,8 @@ public static class ExpenseTagModelMappings
             Id = tag.Id,
             Name = tag.Name,
             Description = tag.Description,
+            ColorId = tag.ColorId,
+            ColorName = tag.Color.Name,
             HexCode = tag.Color.HexCode,
             IconUrl = tag.IconUrl,
             CreatorId = tag.Creator.Id

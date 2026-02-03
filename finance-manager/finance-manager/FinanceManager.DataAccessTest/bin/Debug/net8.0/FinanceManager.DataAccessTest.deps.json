@@ -919,7 +919,7 @@
       "FinanceManager.DataAccess/1.0.0": {
         "dependencies": {
           "FinanceManager.Domain": "1.0.0",
-          "IDataAccess": "1.0.0",
+          "FinanceManager.IDataAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.23",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.23"
         },
@@ -928,24 +928,16 @@
         }
       },
       "FinanceManager.Domain/1.0.0": {
-        "dependencies": {
-          "Shared": "1.0.0"
-        },
         "runtime": {
           "FinanceManager.Domain.dll": {}
         }
       },
-      "IDataAccess/1.0.0": {
+      "FinanceManager.IDataAccess/1.0.0": {
         "dependencies": {
           "FinanceManager.Domain": "1.0.0"
         },
         "runtime": {
-          "IDataAccess.dll": {}
-        }
-      },
-      "Shared/1.0.0": {
-        "runtime": {
-          "Shared.dll": {}
+          "FinanceManager.IDataAccess.dll": {}
         }
       },
       "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
@@ -1436,12 +1428,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "IDataAccess/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Shared/1.0.0": {
+    "FinanceManager.IDataAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
