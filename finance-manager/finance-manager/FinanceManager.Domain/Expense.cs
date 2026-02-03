@@ -1,4 +1,4 @@
-﻿namespace finance_manager;
+namespace finance_manager;
 
 public class Expense
 {
@@ -18,7 +18,7 @@ public class Expense
     
     private Expense() { }
 
-    public string Id { get; }
+    public string Id { get; private set; }
     public string Name { get; private set; }
     public decimal Amount { get; private set; }
     public ExpenseTag Tag { get; private set; }

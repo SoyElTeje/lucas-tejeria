@@ -1,0 +1,12 @@
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\bin\Debug\net8.0\Shared.deps.json
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\bin\Debug\net8.0\Shared.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\bin\Debug\net8.0\Shared.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\obj\Debug\net8.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\obj\Debug\net8.0\Shared.AssemblyInfoInputs.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\obj\Debug\net8.0\Shared.AssemblyInfo.cs
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\obj\Debug\net8.0\Shared.csproj.CoreCompileInputs.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\obj\Debug\net8.0\Shared.sourcelink.json
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\obj\Debug\net8.0\Shared.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\obj\Debug\net8.0\refint\Shared.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\obj\Debug\net8.0\Shared.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\Shared\obj\Debug\net8.0\ref\Shared.dll

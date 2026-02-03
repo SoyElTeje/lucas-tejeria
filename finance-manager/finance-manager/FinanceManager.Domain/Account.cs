@@ -1,4 +1,4 @@
-﻿using Shared;
+using Shared;
 
 namespace finance_manager;
 
@@ -24,10 +24,10 @@ public class Account
 
     public string Id { get; set; }
     public string Name { get; set; }
-    public CurrencyType CurrencyType { get; }
-    
+    public CurrencyType CurrencyType { get; private set; }
+
     public string Description { get; set; }
-    public decimal Balance { get; }
+    public decimal Balance { get; private set; }
     public bool IsActive { get; private set; }
     public DateTime CreatedDate { get; }
 

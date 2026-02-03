@@ -1,0 +1,16 @@
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\bin\Debug\net8.0\FinanceManager.Domain.deps.json
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\bin\Debug\net8.0\FinanceManager.Domain.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\bin\Debug\net8.0\FinanceManager.Domain.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\bin\Debug\net8.0\Shared.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\bin\Debug\net8.0\Shared.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\FinanceManager.Domain.csproj.AssemblyReference.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\FinanceManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\FinanceManager.Domain.AssemblyInfoInputs.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\FinanceManager.Domain.AssemblyInfo.cs
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\FinanceManager.Domain.csproj.CoreCompileInputs.cache
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\FinanceManager.Domain.sourcelink.json
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\FinanceM.50ACD435.Up2Date
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\FinanceManager.Domain.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\refint\FinanceManager.Domain.dll
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\FinanceManager.Domain.pdb
+C:\Proyectos\lucas-tejeria\finance-manager\finance-manager\FinanceManager.Domain\obj\Debug\net8.0\ref\FinanceManager.Domain.dll

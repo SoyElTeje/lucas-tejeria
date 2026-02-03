@@ -1,0 +1,22 @@
+# SQL Server para Finance Manager
+# Credenciales alineadas con appsettings.json:
+#   Server=localhost;Database=FinanceManager;User Id=sa;Password=Passw1rd;TrustServerCertificate=true;
+#
+# Uso:
+#   docker compose up -d
+#   La base FinanceManager se crea al ejecutar las migraciones de EF Core.
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: finance-manager-sql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Passw1rd"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+volumes:
+  sqlserver_data:

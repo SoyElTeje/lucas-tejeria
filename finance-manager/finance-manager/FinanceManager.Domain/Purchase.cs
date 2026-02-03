@@ -1,4 +1,4 @@
-﻿namespace finance_manager;
+namespace finance_manager;
 
 public class Purchase
 {
@@ -7,7 +7,7 @@ public class Purchase
     public string Id { get; private set; }
     public DateTime Date { get; private set; }
     public string Notes { get; set; }
-    public List<Expense> Expenses { get; private set; }
+    public List<Expense> Expenses { get; private set; } = new List<Expense>();
 
     public Purchase(DateTime date, string notes)
     {

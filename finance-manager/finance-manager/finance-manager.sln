@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceManager.DataAccess", "FinanceManager.DataAccess\FinanceManager.DataAccess.csproj", "{4560417B-93BB-4982-ACAE-068C2BE05006}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceManager.Api", "FinanceManager.Api\FinanceManager.Api.csproj", "{BFC49F4C-8D55-473A-A254-68B19CA4D09B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,10 +28,15 @@ Global
 		{4560417B-93BB-4982-ACAE-068C2BE05006}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4560417B-93BB-4982-ACAE-068C2BE05006}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4560417B-93BB-4982-ACAE-068C2BE05006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC49F4C-8D55-473A-A254-68B19CA4D09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC49F4C-8D55-473A-A254-68B19CA4D09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC49F4C-8D55-473A-A254-68B19CA4D09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC49F4C-8D55-473A-A254-68B19CA4D09B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{96029AB1-6C4E-4CC7-A6EC-750C2864F0FA} = {9808AC72-9910-4C0D-A20A-5CDD2C1BBD81}
 		{2023AC0C-DE54-468C-8E50-624A709B23E6} = {9808AC72-9910-4C0D-A20A-5CDD2C1BBD81}
 		{4560417B-93BB-4982-ACAE-068C2BE05006} = {9808AC72-9910-4C0D-A20A-5CDD2C1BBD81}
+		{BFC49F4C-8D55-473A-A254-68B19CA4D09B} = {9808AC72-9910-4C0D-A20A-5CDD2C1BBD81}
 	EndGlobalSection
 EndGlobal
