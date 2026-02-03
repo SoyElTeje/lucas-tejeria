@@ -11,19 +11,22 @@ public class AccountRepository(SqlContext context) : IAccountRepository
 
     public Account? GetById(string accountId)
     {
-        return _context.Accounts.FirstOrDefault(a => a.Id == accountId);
+        return _context.Accounts
+            .Include(a => a.Currency)
+            .FirstOrDefault(a => a.Id == accountId);
     }
 
     public List<Account> GetByUserId(string userId)
     {
         return _context.Accounts
             .Where(a => EF.Property<string>(a, "UserId") == userId)
+            .Include(a => a.Currency)
             .ToList();
     }
 
     public List<Account> GetAll()
     {
-        return _context.Accounts.ToList();
+        return _context.Accounts.Include(a => a.Currency).ToList();
     }
 
     public bool Add(Account account, string userId)

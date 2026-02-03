@@ -14,6 +14,7 @@ public class SqlContext : DbContext
     }
 
     public virtual DbSet<Account> Accounts { get; set; }
+    public virtual DbSet<Currency> Currencies { get; set; }
     public virtual DbSet<Expense> Expenses { get; set; }
     public virtual DbSet<ExpenseTag> ExpenseTags { get; set; }
     public virtual DbSet<Income> Incomes { get; set; }
@@ -35,10 +36,22 @@ public class SqlContext : DbContext
             entity.Property(e => e.Surname).HasMaxLength(200);
             entity.Property(e => e.Email).HasMaxLength(256);
             entity.Property(e => e.Password).HasMaxLength(256);
-            entity.Property(e => e.Role).HasMaxLength(50);
         });
 
-        // ----- 2. Account (FK User vía shadow) -----
+        // ----- 2. Currency -----
+        modelBuilder.Entity<Currency>(entity =>
+        {
+            entity.ToTable("Currencies");
+            entity.HasKey(e => e.Id);
+
+            entity.HasIndex(e => e.Code).IsUnique();
+
+            entity.Property(e => e.Code).HasMaxLength(3);
+            entity.Property(e => e.FullName).HasMaxLength(100);
+            entity.Property(e => e.Symbol).HasMaxLength(10);
+        });
+
+        // ----- 3. Account (FK User vía shadow, FK Currency) -----
         modelBuilder.Entity<Account>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -52,14 +65,13 @@ public class SqlContext : DbContext
                 .HasForeignKey("UserId")
                 .OnDelete(DeleteBehavior.Restrict);
 
-            entity.OwnsOne(e => e.CurrencyType, c =>
-            {
-                c.Property(x => x.Code).HasMaxLength(3);
-                c.Property(x => x.FullName).HasMaxLength(100);
-            });
+            entity.HasOne(e => e.Currency)
+                .WithMany()
+                .HasForeignKey(e => e.CurrencyId)
+                .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 3. ExpenseTag (FK User vía shadow) -----
+        // ----- 4. ExpenseTag (FK User vía shadow) -----
         modelBuilder.Entity<ExpenseTag>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -79,7 +91,7 @@ public class SqlContext : DbContext
             });
         });
 
-        // ----- 4. Purchase (FK Account vía shadow) -----
+        // ----- 5. Purchase (FK Account vía shadow) -----
         modelBuilder.Entity<Purchase>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -92,7 +104,7 @@ public class SqlContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 5. Expense (FK ExpenseTag y Purchase vía shadow) -----
+        // ----- 6. Expense (FK ExpenseTag y Purchase vía shadow) -----
         modelBuilder.Entity<Expense>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -111,7 +123,7 @@ public class SqlContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 6. RecurrenceRuleBase (TPH) y EveryNDaysRule -----
+        // ----- 7. RecurrenceRuleBase (TPH) y EveryNDaysRule -----
         modelBuilder.Entity<RecurrenceRuleBase>(entity =>
         {
             entity.ToTable("RecurrenceRules");
@@ -128,7 +140,7 @@ public class SqlContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 7. ScheduledIncome (FK RecurrenceRuleBase vía shadow) -----
+        // ----- 8. ScheduledIncome (FK RecurrenceRuleBase vía shadow) -----
         modelBuilder.Entity<ScheduledIncome>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -139,7 +151,7 @@ public class SqlContext : DbContext
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
-        // ----- 8. Income (FK ScheduledIncome opcional vía shadow) -----
+        // ----- 9. Income (FK Currency, FK ScheduledIncome opcional vía shadow) -----
         modelBuilder.Entity<Income>(entity =>
         {
             entity.HasKey(e => e.Id);
@@ -147,17 +159,16 @@ public class SqlContext : DbContext
             entity.Property(e => e.Amount).HasPrecision(18, 2);
             entity.Property(e => e.Description).HasMaxLength(1000);
 
+            entity.HasOne(e => e.Currency)
+                .WithMany()
+                .HasForeignKey(e => e.CurrencyId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             entity.HasOne(e => e.ScheduledIncome)
                 .WithMany()
                 .HasForeignKey("ScheduledIncomeId")
                 .IsRequired(false)
                 .OnDelete(DeleteBehavior.SetNull);
-
-            entity.OwnsOne(e => e.Currency, c =>
-            {
-                c.Property(x => x.Code).HasMaxLength(3);
-                c.Property(x => x.FullName).HasMaxLength(100);
-            });
         });
     }
 }

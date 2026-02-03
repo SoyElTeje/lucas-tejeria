@@ -12,6 +12,20 @@ namespace FinanceManager.DataAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Currencies",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
+                    FullName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Symbol = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Currencies", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -20,7 +34,6 @@ namespace FinanceManager.DataAccess.Migrations
                     Surname = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsAdmin = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -35,8 +48,7 @@ namespace FinanceManager.DataAccess.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    CurrencyType_Code = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
-                    CurrencyType_FullName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    CurrencyId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
                     Balance = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
@@ -45,6 +57,12 @@ namespace FinanceManager.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Accounts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Accounts_Currencies_CurrencyId",
+                        column: x => x.CurrencyId,
+                        principalTable: "Currencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Accounts_Users_UserId",
                         column: x => x.UserId,
@@ -169,8 +187,7 @@ namespace FinanceManager.DataAccess.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Amount = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false),
-                    Currency_Code = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
-                    Currency_FullName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    CurrencyId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
                     ReceivedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ScheduledIncomeId = table.Column<string>(type: "nvarchar(450)", nullable: true)
@@ -178,6 +195,12 @@ namespace FinanceManager.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Incomes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Incomes_Currencies_CurrencyId",
+                        column: x => x.CurrencyId,
+                        principalTable: "Currencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Incomes_ScheduledIncomes_ScheduledIncomeId",
                         column: x => x.ScheduledIncomeId,
@@ -187,9 +210,20 @@ namespace FinanceManager.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Accounts_CurrencyId",
+                table: "Accounts",
+                column: "CurrencyId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Accounts_UserId",
                 table: "Accounts",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Currencies_Code",
+                table: "Currencies",
+                column: "Code",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Expenses_PurchaseId",
@@ -205,6 +239,11 @@ namespace FinanceManager.DataAccess.Migrations
                 name: "IX_ExpenseTags_CreatorId",
                 table: "ExpenseTags",
                 column: "CreatorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Incomes_CurrencyId",
+                table: "Incomes",
+                column: "CurrencyId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Incomes_ScheduledIncomeId",
@@ -256,6 +295,9 @@ namespace FinanceManager.DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "RecurrenceRules");
+
+            migrationBuilder.DropTable(
+                name: "Currencies");
 
             migrationBuilder.DropTable(
                 name: "Users");

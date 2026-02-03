@@ -1,4 +1,4 @@
-﻿namespace finance_manager;
+namespace finance_manager;
 
 public class User
 {
@@ -21,7 +21,6 @@ public class User
     public string Surname { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
-    public string Role { get; set; } = "ClientUser";
     public DateTime BirthDate { get; set; }
     public List<Account> Accounts { get; } = new List<Account>();
     

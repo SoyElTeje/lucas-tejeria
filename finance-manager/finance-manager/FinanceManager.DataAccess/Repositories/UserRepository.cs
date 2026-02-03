@@ -36,7 +36,7 @@ public class UserRepository(SqlContext context) : IUserRepository
 
     public bool UpdateUser(User user)
     {
-        if (!IsEmailAlreadyUsed(user.Email) && ValidEmailFormat(user.Email))
+        if (ValidEmailFormat(user.Email))
         {
             _context.Users.Update(user);
             return true;

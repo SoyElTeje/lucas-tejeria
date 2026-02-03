@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinanceManager.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b198ec2111cd4045fc91ed195b58bfbdf5e88a4e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd9b48ac399cad47d1936f118d5356a892167274")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinanceManager.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinanceManager.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

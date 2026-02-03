@@ -1,5 +1,3 @@
-using Shared;
-
 namespace finance_manager;
 
 public class Account
@@ -8,23 +6,25 @@ public class Account
     {
     }
 
-    public Account(string name, CurrencyType currencyType, decimal inicialBalance)
+    public Account(string name, Currency currency, decimal inicialBalance)
     {
         Id = Guid.NewGuid().ToString();
         Name = name;
-        CurrencyType = currencyType;
+        CurrencyId = currency.Id;
+        Currency = currency;
         Balance = inicialBalance;
         CreatedDate = DateTime.Now;
     }
 
-    public Account(string name, CurrencyType currencyType, decimal inicialBalance, string description) : this(name, currencyType, inicialBalance)
+    public Account(string name, Currency currency, decimal inicialBalance, string description) : this(name, currency, inicialBalance)
     {
         Description = description;
     }
 
     public string Id { get; set; }
     public string Name { get; set; }
-    public CurrencyType CurrencyType { get; private set; }
+    public string CurrencyId { get; set; }
+    public Currency Currency { get; private set; }
 
     public string Description { get; set; }
     public decimal Balance { get; private set; }

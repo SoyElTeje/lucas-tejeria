@@ -12,6 +12,7 @@ public class IncomeRepository(SqlContext context) : IIncomeRepository
     public Income? GetById(string incomeId)
     {
         return _context.Incomes
+            .Include(i => i.Currency)
             .Include(i => i.ScheduledIncome)
             .FirstOrDefault(i => i.Id == incomeId);
     }
@@ -19,6 +20,7 @@ public class IncomeRepository(SqlContext context) : IIncomeRepository
     public List<Income> GetAll()
     {
         return _context.Incomes
+            .Include(i => i.Currency)
             .Include(i => i.ScheduledIncome)
             .OrderByDescending(i => i.ReceivedAt)
             .ToList();
@@ -28,6 +30,7 @@ public class IncomeRepository(SqlContext context) : IIncomeRepository
     {
         return _context.Incomes
             .Where(i => EF.Property<string?>(i, "ScheduledIncomeId") == scheduledIncomeId)
+            .Include(i => i.Currency)
             .Include(i => i.ScheduledIncome)
             .OrderByDescending(i => i.ReceivedAt)
             .ToList();

@@ -31,6 +31,10 @@ namespace FinanceManager.DataAccess.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("CurrencyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(1000)
@@ -49,9 +53,39 @@ namespace FinanceManager.DataAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CurrencyId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Accounts");
+                });
+
+            modelBuilder.Entity("finance_manager.Currency", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Symbol")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("Currencies", (string)null);
                 });
 
             modelBuilder.Entity("finance_manager.Expense", b =>
@@ -124,6 +158,10 @@ namespace FinanceManager.DataAccess.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("CurrencyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(1000)
@@ -136,6 +174,8 @@ namespace FinanceManager.DataAccess.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CurrencyId");
 
                     b.HasIndex("ScheduledIncomeId");
 
@@ -243,11 +283,6 @@ namespace FinanceManager.DataAccess.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -273,36 +308,18 @@ namespace FinanceManager.DataAccess.Migrations
 
             modelBuilder.Entity("finance_manager.Account", b =>
                 {
+                    b.HasOne("finance_manager.Currency", "Currency")
+                        .WithMany()
+                        .HasForeignKey("CurrencyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("finance_manager.User", null)
                         .WithMany("Accounts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.OwnsOne("Shared.CurrencyType", "CurrencyType", b1 =>
-                        {
-                            b1.Property<string>("AccountId")
-                                .HasColumnType("nvarchar(450)");
-
-                            b1.Property<string>("Code")
-                                .IsRequired()
-                                .HasMaxLength(3)
-                                .HasColumnType("nvarchar(3)");
-
-                            b1.Property<string>("FullName")
-                                .IsRequired()
-                                .HasMaxLength(100)
-                                .HasColumnType("nvarchar(100)");
-
-                            b1.HasKey("AccountId");
-
-                            b1.ToTable("Accounts");
-
-                            b1.WithOwner()
-                                .HasForeignKey("AccountId");
-                        });
-
-                    b.Navigation("CurrencyType")
-                        .IsRequired();
+                    b.Navigation("Currency");
                 });
 
             modelBuilder.Entity("finance_manager.Expense", b =>
@@ -355,36 +372,18 @@ namespace FinanceManager.DataAccess.Migrations
 
             modelBuilder.Entity("finance_manager.Income", b =>
                 {
+                    b.HasOne("finance_manager.Currency", "Currency")
+                        .WithMany()
+                        .HasForeignKey("CurrencyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("finance_manager.ScheduledIncome", "ScheduledIncome")
                         .WithMany()
                         .HasForeignKey("ScheduledIncomeId")
                         .OnDelete(DeleteBehavior.SetNull);
 
-                    b.OwnsOne("Shared.CurrencyType", "Currency", b1 =>
-                        {
-                            b1.Property<string>("IncomeId")
-                                .HasColumnType("nvarchar(450)");
-
-                            b1.Property<string>("Code")
-                                .IsRequired()
-                                .HasMaxLength(3)
-                                .HasColumnType("nvarchar(3)");
-
-                            b1.Property<string>("FullName")
-                                .IsRequired()
-                                .HasMaxLength(100)
-                                .HasColumnType("nvarchar(100)");
-
-                            b1.HasKey("IncomeId");
-
-                            b1.ToTable("Incomes");
-
-                            b1.WithOwner()
-                                .HasForeignKey("IncomeId");
-                        });
-
-                    b.Navigation("Currency")
-                        .IsRequired();
+                    b.Navigation("Currency");
 
                     b.Navigation("ScheduledIncome");
                 });
